@@ -11,4 +11,4 @@ from employees
 left join customers on employees.employeeNumber=customers.salesrepemployeeNumber
 where employees.jobTitle='Sales Rep'
 group by employees.employeeNumber
-order by Bonus desc
+order by count(customers.customerNumber) desc 
